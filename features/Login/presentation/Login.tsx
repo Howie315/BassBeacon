@@ -1,4 +1,4 @@
-import styles from "./LoginSheet";
+import loginSheet from "./LoginSheet";
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
 
@@ -12,24 +12,24 @@ const Login = () => {
 	};
 
 	return (
-		<View style={styles.container}>
-			<Text style={styles.title}>Sign In</Text>
+		<View style={loginSheet.container}>
+			<Text style={loginSheet.title}>Sign In</Text>
 			<TextInput
-				style={styles.input}
+				style={loginSheet.input}
 				placeholder="Username"
 				value={username}
 				onChangeText={setUsername}
 			/>
 			<TextInput
-				style={styles.input}
+				style={loginSheet.input}
 				placeholder="Password"
 				value={password}
 				secureTextEntry={true}
 				onChangeText={setPassword}
 			/>
-			<Text style={styles.forgetPassword}>Forgot Password?</Text>
-			<TouchableOpacity style={styles.button} onPress={handleLogin}>
-				<Text style={styles.buttonText}>Login</Text>
+			<Text style={loginSheet.forgetPassword}>Forgot Password?</Text>
+			<TouchableOpacity style={loginSheet.button} onPress={handleLogin}>
+				<Text style={loginSheet.buttonText}>Login</Text>
 			</TouchableOpacity>
 		</View>
 	);
