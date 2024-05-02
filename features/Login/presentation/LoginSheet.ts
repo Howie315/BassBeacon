@@ -25,6 +25,7 @@ const loginSheet = StyleSheet.create({
 		fontSize: 18,
 		backgroundColor: "rgba(255, 255, 255, 0.2)",
 		color: "#fff",
+		fontFamily: "Kodchasan_Regular",
 	},
 	forgetPassword: {
 		fontFamily: "Kodchasan_Bold",
