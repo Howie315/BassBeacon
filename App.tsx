@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Login from "./features/Login/presentation/Login";
+import { globalSheet } from "./globalSheet"; 
+import {
+	useFonts,
+	Kodchasan_400Regular,
+	Kodchasan_700Bold,
+} from "@expo-google-fonts/kodchasan";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+   let [fontsLoaded] = useFonts({
+			Kodchasan_Regular: Kodchasan_400Regular,
+			Kodchasan_Bold: Kodchasan_700Bold,
+   });
+  
+	return (
+		<View style={globalSheet.container}>
+			<Login />
+			<StatusBar style="auto" />
+		</View>
+	);
+}
