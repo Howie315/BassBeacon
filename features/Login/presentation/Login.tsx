@@ -20,7 +20,9 @@ const Login = () => {
 
   const handleLogin = useCallback(() => {
     console.log("Login attempt with:", username, password);
-    // Implement your login logic here
+
+    if (username == "angel" && password == "tran") {
+    }
   }, [username, password]);
 
   return (
