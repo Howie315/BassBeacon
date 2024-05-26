@@ -1,5 +1,5 @@
 import loginSheet from "./LoginSheet";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import {
   View,
   Text,
@@ -18,14 +18,10 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log("Logo path:", Logo);
-  console.log("Background1 path:", background1);
-  console.log("Background2 path:", background2);
-
-  const handleLogin = () => {
+  const handleLogin = useCallback(() => {
     console.log("Login attempt with:", username, password);
     // Implement your login logic here
-  };
+  }, [username, password]);
 
   return (
     <LinearGradient
@@ -75,4 +71,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default React.memo(Login);

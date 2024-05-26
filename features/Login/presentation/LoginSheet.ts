@@ -12,7 +12,7 @@ const loginSheet = StyleSheet.create({
     marginBottom: 20,
     color: "#fff",
     fontFamily: "Kodchasan_Bold",
-    width: "60%",
+    width: "70%",
     paddingLeft: 30,
   },
   backgroundImage: {
