@@ -23,7 +23,7 @@ const loginSheet = StyleSheet.create({
 	},
 	backgroundImage2: {
 		position: "absolute",
-		bottom: -300,
+		bottom: -400,
 		right: 100,
 		zIndex: 1, // Lower zIndex means it will be 'under' the text
 	},
